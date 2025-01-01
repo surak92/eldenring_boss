@@ -182,13 +182,13 @@ export default {
     },
     bossImmune() {
       const imLen = this.checkedNames.length;
-      const len = this.bossListOriginal.length;
+      const len = this.bossList.length;
       this.inputValue = "";
       switch (imLen) {
         case 1:
           for (let i = 0; i < len; i++) {
             if (
-              this.bossListOriginal[i][this.checkedNames[0]].includes(
+              this.bossList[i][this.checkedNames[0]].includes(
                 "면역"
               ) === false
             ) {
@@ -201,8 +201,8 @@ export default {
         case 2:
           for (let i = 0; i < len; i++) {
             if (
-              this.bossListOriginal[i][this.checkedNames[0]].includes("면역") &&
-              this.bossListOriginal[i][this.checkedNames[1]].includes(
+              this.bossList[i][this.checkedNames[0]].includes("면역") &&
+              this.bossList[i][this.checkedNames[1]].includes(
                 "면역"
               ) === true
             ) {
@@ -215,9 +215,9 @@ export default {
         case 3:
           for (let i = 0; i < len; i++) {
             if (
-              this.bossListOriginal[i][this.checkedNames[0]].includes("면역") &&
-              this.bossListOriginal[i][this.checkedNames[1]].includes("면역") &&
-              this.bossListOriginal[i][this.checkedNames[2]].includes(
+              this.bossList[i][this.checkedNames[0]].includes("면역") &&
+              this.bossList[i][this.checkedNames[1]].includes("면역") &&
+              this.bossList[i][this.checkedNames[2]].includes(
                 "면역"
               ) === true
             ) {
@@ -230,10 +230,10 @@ export default {
         case 4:
           for (let i = 0; i < len; i++) {
             if (
-              this.bossListOriginal[i][this.checkedNames[0]].includes("면역") &&
-              this.bossListOriginal[i][this.checkedNames[1]].includes("면역") &&
-              this.bossListOriginal[i][this.checkedNames[2]].includes("면역") &&
-              this.bossListOriginal[i][this.checkedNames[3]].includes(
+              this.bossList[i][this.checkedNames[0]].includes("면역") &&
+              this.bossList[i][this.checkedNames[1]].includes("면역") &&
+              this.bossList[i][this.checkedNames[2]].includes("면역") &&
+              this.bossList[i][this.checkedNames[3]].includes(
                 "면역"
               ) === true
             ) {
@@ -246,11 +246,11 @@ export default {
         case 5:
           for (let i = 0; i < len; i++) {
             if (
-              this.bossListOriginal[i][this.checkedNames[0]].includes("면역") &&
-              this.bossListOriginal[i][this.checkedNames[1]].includes("면역") &&
-              this.bossListOriginal[i][this.checkedNames[2]].includes("면역") &&
-              this.bossListOriginal[i][this.checkedNames[3]].includes("면역") &&
-              this.bossListOriginal[i][this.checkedNames[4]].includes(
+              this.bossList[i][this.checkedNames[0]].includes("면역") &&
+              this.bossList[i][this.checkedNames[1]].includes("면역") &&
+              this.bossList[i][this.checkedNames[2]].includes("면역") &&
+              this.bossList[i][this.checkedNames[3]].includes("면역") &&
+              this.bossList[i][this.checkedNames[4]].includes(
                 "면역"
               ) === true
             ) {
