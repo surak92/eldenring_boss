@@ -6,12 +6,13 @@
         class="search-input"
         type="text"
         placeholder="보스 이름을 입력하세요."
+        v-model="inputValue"
         @input="searchBoss($event)"
       />
     </div>
     <div class="immunity">
       <h3 class="imTitle">면역 속성 검색</h3>
-      <input type="checkbox" value="all" v-model="allSelected" />
+      <input type="checkbox" value="all" v-model="allSelected" @change="bossImmune()" />
       <label for="all">전체&nbsp;&nbsp;</label>
       <br />
       <input
@@ -27,6 +28,7 @@
         id="scarletrot"
         value="scarletrot"
         v-model="checkedNames"
+        @change="bossImmune()"
       />
       <label for="scarletrot">부패&nbsp;</label>
       <input
@@ -34,6 +36,7 @@
         id="hemorrhage"
         value="hemorrhage"
         v-model="checkedNames"
+        @change="bossImmune()"
       />
       <label for="hemorrhage">출혈&nbsp;</label>
       <input
@@ -41,11 +44,17 @@
         id="frostbite"
         value="frostbite"
         v-model="checkedNames"
+        @change="bossImmune()"
       />
       <label for="frostbite">동상&nbsp;</label>
-      <input type="checkbox" id="sleep" value="sleep" v-model="checkedNames" />
+      <input
+        type="checkbox"
+        id="sleep"
+        value="sleep"
+        v-model="checkedNames"
+        @change="bossImmune()"
+      />
       <label for="sleep">수면&nbsp;</label>
-      <div>체크된 속성: {{ checkedNames }}</div>
     </div>
   </header>
   <main id="main">
@@ -132,6 +141,7 @@ export default {
   name: "App",
   data() {
     return {
+      inputValue: "",
       OrderOriginal,
       labelOriginal,
       bossListOriginal,
@@ -170,9 +180,91 @@ export default {
       }
     },
     bossImmune() {
-      this.checkedNames.forEach(function (value) {
-        console.log(value);
-      });
+      const imLen = this.checkedNames.length;
+      const len = this.bossListOriginal.length;
+      this.inputValue = "";
+      switch (imLen) {
+        case 1:
+          for (let i = 0; i < len; i++) {
+            if (
+              this.bossListOriginal[i][this.checkedNames[0]].includes(
+                "면역"
+              ) === false
+            ) {
+              document.querySelectorAll(".boss-item")[i].style.display = "none";
+            } else {
+              document.querySelectorAll(".boss-item")[i].style.display = "";
+            }
+          }
+          break;
+        case 2:
+          for (let i = 0; i < len; i++) {
+            if (
+              this.bossListOriginal[i][this.checkedNames[0]].includes("면역") &&
+              this.bossListOriginal[i][this.checkedNames[1]].includes(
+                "면역"
+              ) === true
+            ) {
+              document.querySelectorAll(".boss-item")[i].style.display = "";
+            } else {
+              document.querySelectorAll(".boss-item")[i].style.display = "none";
+            }
+          }
+          break;
+        case 3:
+          for (let i = 0; i < len; i++) {
+            if (
+              this.bossListOriginal[i][this.checkedNames[0]].includes("면역") &&
+              this.bossListOriginal[i][this.checkedNames[1]].includes("면역") &&
+              this.bossListOriginal[i][this.checkedNames[2]].includes(
+                "면역"
+              ) === true
+            ) {
+              document.querySelectorAll(".boss-item")[i].style.display = "";
+            } else {
+              document.querySelectorAll(".boss-item")[i].style.display = "none";
+            }
+          }
+          break;
+        case 4:
+          for (let i = 0; i < len; i++) {
+            if (
+              this.bossListOriginal[i][this.checkedNames[0]].includes("면역") &&
+              this.bossListOriginal[i][this.checkedNames[1]].includes("면역") &&
+              this.bossListOriginal[i][this.checkedNames[2]].includes("면역") &&
+              this.bossListOriginal[i][this.checkedNames[3]].includes(
+                "면역"
+              ) === true
+            ) {
+              document.querySelectorAll(".boss-item")[i].style.display = "";
+            } else {
+              document.querySelectorAll(".boss-item")[i].style.display = "none";
+            }
+          }
+          break;
+        case 5:
+          for (let i = 0; i < len; i++) {
+            if (
+              this.bossListOriginal[i][this.checkedNames[0]].includes("면역") &&
+              this.bossListOriginal[i][this.checkedNames[1]].includes("면역") &&
+              this.bossListOriginal[i][this.checkedNames[2]].includes("면역") &&
+              this.bossListOriginal[i][this.checkedNames[3]].includes("면역") &&
+              this.bossListOriginal[i][this.checkedNames[4]].includes(
+                "면역"
+              ) === true
+            ) {
+              document.querySelectorAll(".boss-item")[i].style.display = "";
+            } else {
+              document.querySelectorAll(".boss-item")[i].style.display = "none";
+            }
+          }
+          break;
+        default:
+          for (let i = 0; i < len; i++) {
+            document.querySelectorAll(".boss-item")[i].style.display = "";
+          }
+          break;
+      }
     },
     sort(key, num) {
       if (this.Order[num] == 0) {
