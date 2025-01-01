@@ -25,10 +25,10 @@
       "fire":40,
       "lightning":20,
       "holy":40,
-      "poison":"면역",
-      "scarletrot":"면역",
-      "hemorrhage":"면역",
-      "frostbite":"면역",
+      "poison":"??",
+      "scarletrot":"??",
+      "hemorrhage":"??",
+      "frostbite":"??",
       "sleep":"??"
    },
    {
@@ -288,7 +288,7 @@
       "sleep":"??"
    },
    {
-      "name":"스마라그",
+      "name":"휘석룡 스마라그",
       "standard":35,
       "slash":35,
       "strike":35,
@@ -864,7 +864,7 @@
       "sleep":"??"
    },
    {
-      "name":"포르삭스",
+      "name":"사룡 포르삭스",
       "standard":35,
       "slash":35,
       "strike":35,
@@ -909,22 +909,6 @@
       "scarletrot":"653",
       "hemorrhage":"290",
       "frostbite":"653",
-      "sleep":"??"
-   },
-   {
-      "name":"기드온",
-      "standard":"??",
-      "slash":"??",
-      "strike":"??",
-      "thrust":"??",
-      "magic":"??",
-      "fire":"??",
-      "lightning":"??",
-      "holy":"??",
-      "poison":"??",
-      "scarletrot":"??",
-      "hemorrhage":"??",
-      "frostbite":"??",
       "sleep":"??"
    },
    {
@@ -1152,7 +1136,7 @@
       "sleep":"면역"
    },
    {
-      "name":"트리 가드",
+      "name":"트리가드(DLC)",
       "standard":10,
       "slash":35,
       "strike":10,
