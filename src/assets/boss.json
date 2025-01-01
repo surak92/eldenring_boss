@@ -16,7 +16,7 @@
       "sleep":"??"
    },
    {
-      "name":"밤 기병",
+      "name":"밤 기병(말)",
       "standard":35,
       "slash":35,
       "strike":35,
@@ -25,11 +25,27 @@
       "fire":40,
       "lightning":20,
       "holy":40,
-      "poison":"??",
-      "scarletrot":"??",
-      "hemorrhage":"??",
-      "frostbite":"??",
-      "sleep":"??"
+      "poison":"316",
+      "scarletrot":"316",
+      "hemorrhage":"316",
+      "frostbite":"316",
+      "sleep":"면역"
+   },
+   {
+      "name":"밤 기병(본체)",
+      "standard":35,
+      "slash":35,
+      "strike":35,
+      "thrust":10,
+      "magic":40,
+      "fire":40,
+      "lightning":20,
+      "holy":40,
+      "poison":"316",
+      "scarletrot":"316",
+      "hemorrhage":"517",
+      "frostbite":"517",
+      "sleep":"면역"
    },
    {
       "name":"비룡 아길",
