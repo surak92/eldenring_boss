@@ -1168,10 +1168,10 @@
       "sleep":"면역"
    },
    {
-      "name":"죽음 의례의 새",
+      "name":"죽음 의례의 새(DLC)",
       "standard":10,
       "slash":10,
-      "strike":40,
+      "strike":-40,
       "thrust":35,
       "magic":20,
       "fire":20,

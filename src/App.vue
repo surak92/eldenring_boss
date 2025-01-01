@@ -7,11 +7,12 @@
         type="text"
         placeholder="보스 이름을 입력하세요."
         v-model="inputValue"
+        :disabled="this.checkedNames.length>0"
         @input="searchBoss($event)"
       />
     </div>
     <div class="immunity">
-      <h3 class="imTitle">면역 속성 검색</h3>
+      <h3 class="imTitle">면역 속성 필터</h3>
       <input type="checkbox" value="all" v-model="allSelected" @change="bossImmune()" />
       <label for="all">전체&nbsp;&nbsp;</label>
       <br />
